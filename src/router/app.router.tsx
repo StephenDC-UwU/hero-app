@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
 
 import HeroesLayout from "@/heroes/layouts/HeroesLayout";
 import HeroPage from "@/heroes/pages/hero/HeroPage";
@@ -20,12 +20,16 @@ const router = createBrowserRouter([
             element: <HomePage />
         },
         {
-            path: '/heroes/1',
+            path: '/hero/:slug',
             element: <HeroPage />
         },
         {
             path: '/search',
             element: <SearchPage />
+        },
+        {
+            path: '*',
+            element: <Navigate to="/" />
         }]
     },
     {
