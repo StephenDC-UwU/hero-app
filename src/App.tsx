@@ -1,4 +1,5 @@
 import './App.css'
+import { FavoriteHeroProvider } from './heroes/context/FavoriteHeroContext';
 import { AppRouter } from './router/app.router'
 import {
   QueryClient,
@@ -14,8 +15,10 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <AppRouter />
-        <ReactQueryDevtools initialIsOpen={false} />
+        <FavoriteHeroProvider>
+          <AppRouter />
+          <ReactQueryDevtools initialIsOpen={false} />
+        </FavoriteHeroProvider>
       </QueryClientProvider>
     </>
   )
