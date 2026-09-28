@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import getSummary from "../actions/getSummary";
+import { getSummary } from "../actions/getSummary";
+
 
 
 const useHeroSummary = () => {

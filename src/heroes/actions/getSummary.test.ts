@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import getSummary from "./getSummary";
+import { getSummary } from "./getSummary";
 
 describe("getSummary", () => {
   test("should fetch summary and return complete information", async () => {
