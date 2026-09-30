@@ -14,6 +14,12 @@ const HeroStats = () => {
 
     const calculatedPorcentage = summary?.totalHeroes ? ((favoriteCount / summary.totalHeroes) * 100.00).toFixed(2) : 0;
 
+
+    if (!summary) {
+        return <div>Loading...</div>
+    }
+
+
     return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
 
@@ -44,7 +50,7 @@ const HeroStats = () => {
                 <div className="text-2xl font-bold text-red-600">
                     {favoriteCount}
                 </div>
-                <p className="text-xs text-muted-foreground"> {calculatedPorcentage} % of total</p>
+                <p className="text-xs text-muted-foreground" data-testid="favorite-percentage"> {calculatedPorcentage} % of total</p>
             </HeroStatCard>
 
 

@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { renderHook, waitFor } from "@testing-library/react";
 import type { PropsWithChildren } from "react";
 import { beforeEach, describe, expect, test, vi } from "vitest";

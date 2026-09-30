@@ -150,8 +150,5 @@ describe('useHeroSummary', () => {
         expect(result.current.isLoading).toBeFalsy();
         expect(mockGetSummaryAction).toHaveBeenCalled();
         expect(result.current.error?.message).toBe('Failed to fetch summary');
-
-
-        console.log(result)
     })
 })
